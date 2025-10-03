@@ -1,0 +1,7 @@
+<div class="card">
+      <img [src]="'https://localhost:7265' + product.imageUrl" alt="{{product.name}}" />
+      <h3>{{ product.name }}</h3>
+      <p>Category: {{ product.category }}</p>
+      <p>Price: {{ product.price | currency }}</p>
+      <p *ngIf="product.discountRate > 0">Discount: {{ product.discountRate * 100 }}%</p>
+</div>
