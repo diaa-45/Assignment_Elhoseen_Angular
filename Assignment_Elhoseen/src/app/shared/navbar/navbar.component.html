@@ -1,7 +1,7 @@
 <nav class="navbar">
       <div class="logo">Assignment Elhoseen</div>
       <ul>
-        <li><a routerLink="/products">Products</a></li>
+        <li *ngIf="authService.user$ | async"><a routerLink="/products">Products</a></li>
         <li *ngIf="!(authService.user$ | async)">
           <a routerLink="/login">Login</a>
         </li>
